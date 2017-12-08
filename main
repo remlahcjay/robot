@@ -1,0 +1,30 @@
+package main;
+
+import org.apache.xalan.extensions.ExtensionNamespaceContext;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.seleniumhq.jetty9.security.authentication.LoginAuthenticator;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	//	System.out.print("Hello shitty world! ");
+		// Set property.
+		try {
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\logimine\\Downloads\\robot\\chromedriver_win32\\chromedriver.exe");
+		}catch(Exception e){
+			System.setProperty("webdriver.chrome.driver",args[0].toString());			
+		}
+		robot r = new robot();
+//		r.fighter();
+//		r.trainer();
+		r.upgraderAttack();
+	}
+	
+
+
+}
